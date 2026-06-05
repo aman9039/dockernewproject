@@ -2,22 +2,26 @@ version: "3.8"
 services:
   movies:
     image: aman9039/paymovies:latest
-    ports: 81:80
+    ports:
+      - "81:80"
     deploy:
       replicas: 3
   train:
     image: aman9039/paytrain:latest
-    ports: 82:80
+    ports:
+      - "82:80"
     deploy:
       replicas: 3
   dth:
     image: aman9039/paydth:latest
-    ports: 83:80
+    ports:
+       - "83:80"
     deploy:
       replicas: 3
   recharge:
     image: aman9039/payrecharge:latest
-    ports: 84:80
+    ports:
+      - "84:80"
     deploy:
       replicas: 3
 
